@@ -1,3 +1,5 @@
 # SmartClinic-Appointment
 
-npm start => localhost:9002/appointment
+npm install
+npm start 
+(localhost:9002/appointment)
