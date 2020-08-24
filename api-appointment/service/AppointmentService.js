@@ -31,14 +31,14 @@ let getById = async (req, res) => {
 
 let getByDoctorId = async (req, res) => {
     let id = req.params.id;
-    let app = AppointmentRepository.findByDoctorId(id);
-    
+    let app = await AppointmentRepository.findByDoctorId(id);
+
     res.json(app);
 }
 
 let getByPatientId = async (req, res) => {
     let id = req.params.id;
-    let app = AppointmentRepository.findByPatientId(id);
+    let app = await AppointmentRepository.findByPatientId(id);
     
     res.json(app);
 }
