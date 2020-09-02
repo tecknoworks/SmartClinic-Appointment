@@ -13,5 +13,6 @@ router.get("/doctor/unconfirmed/:id", AppointmentService.getUnConfirmed);
 router.post("/post", AppointmentService.post);
 router.delete("/:id", AppointmentService.remove);
 router.put("/:id", AppointmentService.update);
+router.put('/confirm/:id',AppointmentService.confirmAppointment);
 
 module.exports = router;

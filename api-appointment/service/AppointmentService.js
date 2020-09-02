@@ -65,4 +65,12 @@ let update = async (req,res) => {
     res.json(app);
 }
 
-module.exports = { get, getById, getByDoctorId, getByPatientId, getConfirmed, getUnConfirmed, post, remove, update };
+let confirmAppointment = async(req,res) => {
+    let id = req.params.id;
+    let data = {confirmed: true};
+
+    let app = await AppointmentRepository.update(id,data);
+    res.json(app);
+}
+
+module.exports = { get, getById, getByDoctorId, getByPatientId, getConfirmed, getUnConfirmed, post, remove, update, confirmAppointment };
